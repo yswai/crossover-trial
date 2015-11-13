@@ -1,4 +1,8 @@
 var gulp = require('gulp');
+
+var rename = require('gulp-rename');
+var loopbackAngular = require('gulp-loopback-sdk-angular');
+
 var del = require('del');
 var CacheBuster = require('gulp-cachebust');
 var cachebust = new CacheBuster();
@@ -34,7 +38,14 @@ gulp.task('build-js', function() {
     .pipe(gulp.dest(tmpFolder + '/js'));
 });
 
-gulp.task('dev', ['clean-dist', 'clean-tmp', 'build-js', 'build-css'], function() {
+gulp.task('lb-services', function () {
+  return gulp.src('server/server.js')
+    .pipe(loopbackAngular())
+    .pipe(rename('lb-services.js'))
+    .pipe(gulp.dest(distFolder + '/js'));
+});
+
+gulp.task('dev', ['clean-dist', 'clean-tmp', 'build-js', 'build-css', 'lb-services'], function() {
   gulp.src([tmpFolder + '/**'])
     .pipe(gulp.dest(distFolder));
 });
