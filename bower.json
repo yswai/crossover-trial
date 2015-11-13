@@ -1,0 +1,21 @@
+{
+  "name": "crossover",
+  "version": "0.0.0",
+  "authors": [
+    "yswai <yswai1986@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "bootstrap": "~3.3.5",
+    "lodash": "~3.10.1"
+  }
+}
