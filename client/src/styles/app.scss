@@ -1,0 +1,9 @@
+$testColor: cyan;
+
+.test1 {
+  ul {
+    span {
+      color: $testColor;
+    }
+  }
+}
