@@ -49,25 +49,63 @@ body {
 
 .co-cell-build {
   padding-right: 0 !important;
+  overflow: visible !important;
 }
 
 .co-cell-unit-test {
   padding-left: 0 !important;
   padding-right: 0 !important;
+  overflow: visible !important;
 }
 
 .co-cell-functional-test {
   padding-left: 0 !important;
+  overflow: visible !important;
+}
+
+.co-status {
+  position: relative;
+  .co-circle {
+    i {
+      position: absolute;
+      transform: scale(2.5, 2.5);
+      top: 1.1rem;
+      left: 1.1rem;
+      z-index: 10;
+    }
+    &.passed {
+      i {
+        color: $color-status-passed
+      }
+    }
+  }
 }
 
 .co-progress {
   transform: scaleY(0.3);
   .progress {
     background-color: $color-status-neutral;
-    transform: translateY(2.9rem);
+    transform: translateY(2.9rem) scaleX(1.1);
     outline: solid;
     outline-color: $color-status-neutral;
     outline-width: 1.7rem;
+    .progress-bar {
+      &.pending {
+        background-color: $color-status-pending;
+      }
+      &.neutral {
+        background-color: $color-status-neutral;
+      }
+      &.passed {
+        background-color: $color-status-passed;
+      }
+      &.failed {
+        background-color: $color-status-failed;
+      }
+      &.running {
+        background-color: $color-status-running;
+      }
+    }
   }
 }
 
@@ -117,6 +155,9 @@ body {
          }
        }
      }
-
    }
+
+  .co-row-detail-wrapper {
+    @include display-flex();
+  }
 }
