@@ -1,4 +1,5 @@
-@import "./co-variables.scss";
+@import "./variables.scss";
+@import "./vaadin.scss";
 
 body {
   font-family: 'Oxygen', sans-serif;
@@ -11,9 +12,72 @@ body {
 
 }
 
-.co-grid {
-    table-layout: fixed;
+.co-status-pending {
+  @include color-pending();
+}
+.co-status-passed {
+  @include color-passed();
+}
+.co-status-running {
+  @include color-running();
+}
+.co-status-failed {
+  @include color-failed();
+}
+.co-status-neutral {
+  @include color-neutral();
+}
 
+.co-circle {
+  @include co-circle(3.5rem);
+  &.pending {
+    background-color: $color-status-pending;
+  }
+  &.neutral {
+    background-color: $color-status-neutral;
+  }
+  &.passed {
+    background-color: $color-status-passed;
+  }
+  &.failed {
+    background-color: $color-status-failed;
+  }
+  &.running {
+    background-color: $color-status-running;
+  }
+}
+
+.co-cell-build {
+  padding-right: 0 !important;
+}
+
+.co-cell-unit-test {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.co-cell-functional-test {
+  padding-left: 0 !important;
+}
+
+.co-progress {
+  transform: scaleY(0.3);
+  .progress {
+    background-color: $color-status-neutral;
+    transform: translateY(2.9rem);
+    outline: solid;
+    outline-color: $color-status-neutral;
+    outline-width: 1.7rem;
+  }
+}
+
+.co-grid {
+
+   table-layout: fixed;
+
+   td {
+     vertical-align: middle !important;
+   }
    tbody {
 
      font-size: $font-size-medium;
@@ -37,6 +101,7 @@ body {
      }
 
      tr {
+       cursor: default;
        &.co-row-main {
          &.selected {
            font-weight: $font-weight-bold;

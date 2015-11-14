@@ -27,6 +27,19 @@
       link: function (scope, el, attr, GridController) {
         var $el = $(el);
 
+        scope.getIconName = function (status) {
+
+          var ICON_MAP = {
+            'PASSED': 'fa-check-circle-o',
+            'FAILED': 'fa-times-circle-o',
+            'PENDING': 'fa-ellipsis-h',
+            'RUNNING': 'fa-refresh'
+          };
+
+          return ICON_MAP[status.toUpperCase()];
+
+        };
+
         GridController.registerHandler(function(id) {
           scope.isSelected = (id === scope.rowData.id);
           scope.$apply();
