@@ -41,6 +41,7 @@
 
   app.controller('JobsController', ['$scope', 'jobs', 'helper', 'JOBS_COLUMN_MAP',
     function($scope, jobs, helper, JOBS_COLUMN_MAP) {
+
       var JobsController = this;
 
       JobsController.gridOptions = {
@@ -50,12 +51,28 @@
 
     }]);
 
-  app.controller('RowItemController',
-    ['$scope', 'helper', 'JOBS_COLUMN_MAP', 'Slug', function($scope, helper, JOBS_COLUMN_MAP, Slug) {
-      var RowItemController = this;
-      RowItemController.getColumnValue = function (columnName) {
-        return helper.getColumnValue($scope.rowData, columnName, JOBS_COLUMN_MAP);
+  app.controller('GridController', ['$scope',
+    function($scope) {
+      var GridController = this;
+      GridController.handlers = [];
+      GridController.options = $scope.options;
+
+      GridController.registerHandler = function (handler) {
+        GridController.handlers.push(handler);
       };
-  }]);
+
+      GridController.selectRow = function (id) {
+        GridController.selectedRowId = id;
+        _.each(GridController.handlers, function(handler) {
+          handler(id);
+        });
+      };
+
+      if (!_.isEmpty($scope.data)) {
+        GridController.selectedRowId = _.first($scope.data).id;
+        GridController.selectRow(GridController.selectedRowId);
+      };
+
+    }]);
 
 })();

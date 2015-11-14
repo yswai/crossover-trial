@@ -1,7 +1,57 @@
+@import "./co-variables.scss";
+
 body {
   font-family: 'Oxygen', sans-serif;
+
+  >div {
+    &:first-of-type {
+      margin-top: 40px;
+    }
+  }
+
 }
 
 .co-grid {
+    table-layout: fixed;
 
+   tbody {
+
+     font-size: $font-size-medium;
+
+     td[class^=co-cell] {
+       white-space: nowrap;
+       overflow-x: hidden;
+       text-overflow: ellipsis;
+
+       &.co-cell-time-started {
+         .co-val-time {
+           font-size: $font-size-small;
+         }
+         i {
+          &.fa-clock-o {
+            margin-left: $font-size-small;
+          }
+         }
+       }
+
+     }
+
+     tr {
+       &.co-row-main {
+         &.selected {
+           font-weight: $font-weight-bold;
+         }
+          &:hover {
+            cursor: pointer;
+          }
+       }
+
+       &.co-row-sub {
+         &:not(.selected) {
+           display: none;
+         }
+       }
+     }
+
+   }
 }

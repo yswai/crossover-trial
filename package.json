@@ -23,6 +23,7 @@
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-cachebust": "0.0.6",
+    "gulp-livereload": "^3.8.1",
     "gulp-loopback-sdk-angular": "^0.1.4",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.1.0",

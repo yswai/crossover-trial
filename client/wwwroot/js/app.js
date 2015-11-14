@@ -23,15 +23,9 @@
 
     }]);
 
-    app.run(['$rootScope', 'Slug', function($rootScope, Slug) {
-        $rootScope.slugify = function(input) {
-          return Slug.slugify(input);
-        };
-    }]);
-
     app.filter('slugify', ['Slug', function(Slug) {
       return function(input) {
-        Slug.slugify(input);
+        return Slug.slugify(input);
       };
     }]);
 

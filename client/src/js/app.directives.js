@@ -10,6 +10,8 @@
       scope: {
         options: '='
       },
+      controller: 'GridController',
+      controllerAs: 'GridController',
       templateUrl: 'templates/co-grid.html'
     }
   });
@@ -17,14 +19,35 @@
   app.directive('coRowItemHead', function () {
     return {
       restrict: 'AE',
+      require: '^coGrid',
       scope: {
         options: '=',
         rowData: '='
       },
-      link: function (scope, el) {
+      link: function (scope, el, attr, GridController) {
+        var $el = $(el);
+
+        GridController.registerHandler(function(id) {
+          scope.isSelected = (id === scope.rowData.id);
+          scope.$apply();
+          if (scope.isSelected) {
+            $(el).addClass('selected');
+          } else {
+            $(el).removeClass('selected');
+          }
+          scope.$apply();
+        });
+
+        $el.on('click', function() {
+          GridController.selectRow(scope.rowData.id);
+        });
       },
-      controller: 'RowItemController',
-      controllerAs: 'RowItemController',
+      controller: ['$scope', 'helper', 'JOBS_COLUMN_MAP',
+        function($scope, helper, JOBS_COLUMN_MAP) {
+          $scope.getColumnValue = function (columnName) {
+            return helper.getColumnValue($scope.rowData, columnName, JOBS_COLUMN_MAP);
+          };
+        }],
       templateUrl: 'templates/co-row-item-head.html'
     }
   });
@@ -32,11 +55,25 @@
   app.directive('coRowItemDetail', function () {
     return {
       restrict: 'AE',
+      require: '^coGrid',
       scope: {
         options: '=',
         rowData: '='
       },
-      link: function (scope, el) {
+      link: function (scope, el, attr, GridController) {
+        scope.isSelected = false;
+        GridController.registerHandler(function(id) {
+
+          scope.isSelected = (id === scope.rowData.id);
+
+          if (scope.isSelected) {
+            $(el).addClass('selected');
+          } else {
+            $(el).removeClass('selected');
+          }
+
+          scope.$apply();
+        });
       },
       templateUrl: 'templates/co-row-item-detail.html'
     }
