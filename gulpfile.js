@@ -34,18 +34,21 @@ gulp.task('build-css', function() {
 });
 
 gulp.task('build-js', function() {
-  gulp.src(srcFolder + '/js/**.*')
+  return gulp.src(srcFolder + '/js/**.*')
     .pipe(gulp.dest(tmpFolder + '/js'));
 });
 
 gulp.task('lb-services', function () {
+  del(
+    [distFolder + '/js/lb-services.js']
+  );
   return gulp.src('server/server.js')
     .pipe(loopbackAngular())
     .pipe(rename('lb-services.js'))
     .pipe(gulp.dest(distFolder + '/js'));
 });
 
-gulp.task('dev', ['clean-dist', 'clean-tmp', 'build-js', 'build-css', 'lb-services'], function() {
+gulp.task('dev', [/*'clean-dist', 'clean-tmp',*/ 'build-js', 'build-css', 'lb-services'], function() {
   gulp.src([tmpFolder + '/**'])
     .pipe(gulp.dest(distFolder));
 });
