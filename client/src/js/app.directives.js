@@ -200,7 +200,7 @@
                 color: '#1AB394'
               }, {
                 name: "Missed",
-                y: $scope.unitTestMissed,
+                y: $scope.funcTestMissed,
                 color: '#F8AC59'
               }]
             }]
