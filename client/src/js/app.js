@@ -2,7 +2,7 @@
 
    'use strict';
 
-    var app = angular.module('app', ['ui.router', 'lbServices', 'slugifier']);
+    var app = angular.module('app', ['ui.router', 'lbServices', 'highcharts-ng', 'slugifier']);
 
     app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
