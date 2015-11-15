@@ -17,6 +17,22 @@
     "status": {
       "type": "string",
       "required": true
+    },
+    "timesStarted": {
+      "type": "date",
+      "required": true
+    },
+    "timeFinish": {
+      "type": "date",
+      "required": false
+    },
+    "covered": {
+      "type": "number",
+      "required": false
+    },
+    "total": {
+      "type": "number",
+      "required": false
     }
   },
   "validations": [],

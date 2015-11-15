@@ -8,11 +8,17 @@
     "type" : "BUILD",
     "progress" : 100,
     "status" : "PASSED",
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447410884000,
     "id" : "1"
   }, {
     "type" : "UNIT",
     "progress" : 100,
     "status" : "FAILED",
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447420884000,
+    "covered" : 4444,
+    "total" : 88,
     "id" : "2"
   }
   ]
@@ -25,6 +31,8 @@
   "testStatuses" : [{
     "type" : "BUILD",
     "progress" : 0,
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447411884000,
     "status" : "PENDING",
     "id" : "1"
   }
@@ -38,6 +46,8 @@
   "testStatuses" : [{
     "type" : "BUILD",
     "progress" : 80,
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447413884000,
     "status" : "RUNNING",
     "id" : "1"
   }
@@ -51,17 +61,27 @@
   "testStatuses" : [{
     "type" : "BUILD",
     "progress" : 100,
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447458284000,
     "status" : "PASSED",
     "id" : "1"
   }, {
     "type" : "UNIT",
     "progress" : 100,
     "status" : "PASSED",
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447414484400,
+    "covered" : 6767,
+    "total" : 0,
     "id" : "2"
   }, {
     "type" : "FUNCTIONAL",
     "progress" : 100,
     "status" : "PASSED",
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447415474000,
+    "covered" : 4444,
+    "total" : 88,
     "id" : "3"
   }
   ]
@@ -74,6 +94,8 @@
   "testStatuses" : [{
     "type" : "BUILD",
     "progress" : 0,
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447415374000,
     "status" : "FAILED",
     "id" : "1"
   }
@@ -87,16 +109,26 @@
   "testStatuses" : [{
     "type" : "BUILD",
     "progress" : 100,
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447410884000,
     "status" : "PASSED",
     "id" : "1"
   }, {
     "type" : "UNIT",
     "progress" : 100,
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447410464000,
+    "covered" : 342,
+    "total" : 30,
     "status" : "PASSED",
     "id" : "2"
   }, {
     "type" : "FUNCTIONAL",
     "progress" : 100,
+    "timeStarted" : 1447410374000,
+    "timeFinish" : 1447520374000,
+    "covered" : 14321,
+    "total" : 2000,
     "status" : "PASSED",
     "id" : "3"
   }
