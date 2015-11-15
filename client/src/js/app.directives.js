@@ -31,7 +31,7 @@
 
           var ICON_MAP = {
             'PASSED': isInverted ? 'fa-check-circle' : 'fa-check-circle-o',
-            'FAILED': isInverted ? 'fa-times-circle' : 'fa-times-circle-o',
+            'FAILED': isInverted ? 'fa-exclamation-circle' : 'fa-exclamation',
             'PENDING': 'fa-ellipsis-h',
             'RUNNING': 'fa-refresh'
           };

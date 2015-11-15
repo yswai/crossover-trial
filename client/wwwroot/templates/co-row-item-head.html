@@ -21,10 +21,10 @@
         <div class="progress">
           <div class="progress-bar progress-bar-striped {{getColumnValue('Status') | slugify}}"
                role="progressbar"
-               aria-valuenow="{{getColumnValue(columnName).progress}}"
+               aria-valuenow="{{getColumnValue('Unit Test').progress}}"
                aria-valuemin="0"
-               aria-valuemax="{{getColumnValue(columnName).progress}}"
-               style="width: {{getColumnValue(columnName).progress}}%">
+               aria-valuemax="{{getColumnValue('Unit Test').progress}}"
+               style="width: {{getColumnValue('Unit Test').progress}}%">
           </div>
         </div>
       </div>
@@ -40,10 +40,10 @@
         <div class="progress">
           <div class="progress-bar progress-bar-striped {{getColumnValue('Status') | slugify}}"
                role="progressbar"
-               aria-valuenow="{{getColumnValue(columnName).progress}}"
+               aria-valuenow="{{getColumnValue('Functional Test').progress}}"
                aria-valuemin="0"
-               aria-valuemax="{{getColumnValue(columnName).progress}}"
-               style="width: {{getColumnValue(columnName).progress}}%">
+               aria-valuemax="{{getColumnValue('Functional Test').progress}}"
+               style="width: {{getColumnValue('Functional Test').progress}}%">
           </div>
         </div>
       </div>
