@@ -1,1 +1,105 @@
-[{ "_id" : { "$oid" : "5647328b316383202a5e4b73"} , "changeset" : "432459" , "owner" : "Dora" , "timeStarted" : { "$date" : 1447410374000} , "testStatuses" : [ { "type" : "BUILD" , "progress" : 100 , "status" : "PASSED" , "id" : "1"} , { "type" : "UNIT" , "progress" : 100 , "status" : "FAILED" , "id" : "2"}]},{ "_id" : { "$oid" : "564732cc316383202a5e4b74"} , "changeset" : "432464" , "owner" : "JTuck" , "timeStarted" : { "$date" : 1447410374000} , "testStatuses" : [ { "type" : "BUILD" , "progress" : 0 , "status" : "PENDING" , "id" : "1"}]},{ "_id" : { "$oid" : "564732f5316383202a5e4b75"} , "changeset" : "432463" , "owner" : "Dora" , "timeStarted" : { "$date" : 1447410374000} , "testStatuses" : [ { "type" : "BUILD" , "progress" : 80 , "status" : "RUNNING" , "id" : "1"}]},{ "_id" : { "$oid" : "56473322316383202a5e4b76"} , "changeset" : "432462" , "owner" : "Samy" , "timeStarted" : { "$date" : 1447410374000} , "testStatuses" : [ { "type" : "BUILD" , "progress" : 100 , "status" : "PASSED" , "id" : "1"} , { "type" : "UNIT" , "progress" : 100 , "status" : "PASSED" , "id" : "2"} , { "type" : "FUNCTIONAL" , "progress" : 100 , "status" : "PASSED" , "id" : "3"}]},{ "_id" : { "$oid" : "56473341316383202a5e4b77"} , "changeset" : "432461" , "owner" : "JTuck" , "timeStarted" : { "$date" : 1447410374000} , "testStatuses" : [ { "type" : "BUILD" , "progress" : 0 , "status" : "FAILED" , "id" : "1"}]},{ "_id" : { "$oid" : "5647336f316383202a5e4b78"} , "changeset" : "432460" , "owner" : "Samy" , "timeStarted" : { "$date" : 1447410374000} , "testStatuses" : [ { "type" : "BUILD" , "progress" : 100 , "status" : "PASSED" , "id" : "1"} , { "type" : "UNIT" , "progress" : 100 , "status" : "PASSED" , "id" : "2"} , { "type" : "FUNCTIONAL" , "progress" : 100 , "status" : "PASSED" , "id" : "3"}]}]
+[{
+  "changeset" : "432459",
+  "owner" : "Dora",
+  "timeStarted" : {
+    "$date" : 1447410374000
+  },
+  "testStatuses" : [{
+    "type" : "BUILD",
+    "progress" : 100,
+    "status" : "PASSED",
+    "id" : "1"
+  }, {
+    "type" : "UNIT",
+    "progress" : 100,
+    "status" : "FAILED",
+    "id" : "2"
+  }
+  ]
+}, {
+  "changeset" : "432464",
+  "owner" : "JTuck",
+  "timeStarted" : {
+    "$date" : 1447410374000
+  },
+  "testStatuses" : [{
+    "type" : "BUILD",
+    "progress" : 0,
+    "status" : "PENDING",
+    "id" : "1"
+  }
+  ]
+}, {
+  "changeset" : "432463",
+  "owner" : "Dora",
+  "timeStarted" : {
+    "$date" : 1447410374000
+  },
+  "testStatuses" : [{
+    "type" : "BUILD",
+    "progress" : 80,
+    "status" : "RUNNING",
+    "id" : "1"
+  }
+  ]
+}, {
+  "changeset" : "432462",
+  "owner" : "Samy",
+  "timeStarted" : {
+    "$date" : 1447410374000
+  },
+  "testStatuses" : [{
+    "type" : "BUILD",
+    "progress" : 100,
+    "status" : "PASSED",
+    "id" : "1"
+  }, {
+    "type" : "UNIT",
+    "progress" : 100,
+    "status" : "PASSED",
+    "id" : "2"
+  }, {
+    "type" : "FUNCTIONAL",
+    "progress" : 100,
+    "status" : "PASSED",
+    "id" : "3"
+  }
+  ]
+}, {
+  "changeset" : "432461",
+  "owner" : "JTuck",
+  "timeStarted" : {
+    "$date" : 1447410374000
+  },
+  "testStatuses" : [{
+    "type" : "BUILD",
+    "progress" : 0,
+    "status" : "FAILED",
+    "id" : "1"
+  }
+  ]
+}, {
+  "changeset" : "432460",
+  "owner" : "Samy",
+  "timeStarted" : {
+    "$date" : 1447410374000
+  },
+  "testStatuses" : [{
+    "type" : "BUILD",
+    "progress" : 100,
+    "status" : "PASSED",
+    "id" : "1"
+  }, {
+    "type" : "UNIT",
+    "progress" : 100,
+    "status" : "PASSED",
+    "id" : "2"
+  }, {
+    "type" : "FUNCTIONAL",
+    "progress" : 100,
+    "status" : "PASSED",
+    "id" : "3"
+  }
+  ]
+}
+]
