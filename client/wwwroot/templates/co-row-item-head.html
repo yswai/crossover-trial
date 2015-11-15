@@ -59,7 +59,8 @@
 
     <span class="co-val-{{columnName | slugify}}" ng-switch-when="Status">
       <span class="co-overall-status co-status-{{getColumnValue(columnName) | lowercase}}">
-        <i class="fa {{getIconName(getColumnValue(columnName))}}"></i>&nbsp;{{getColumnValue(columnName)}}
+        <i class="fa {{getIconName(getColumnValue(columnName))}}"></i>&nbsp;<span ng-if="isSelected")>Build<br/></span>
+          {{getColumnValue(columnName) | titleCase}}
       </span>
     </span>
 

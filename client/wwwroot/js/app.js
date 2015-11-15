@@ -34,4 +34,18 @@
       };
     }]);
 
+    app.filter('camelCase', [function() {
+        return function(input) {
+          return _.camelCase(input);
+        }
+    }]);
+
+    app.filter('titleCase', [function() {
+      return function(input) {
+        return input.replace(/\w\S*/g, function(str){
+          return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
+        });
+      };
+    }]);
+
 })();
