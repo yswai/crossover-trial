@@ -4,7 +4,9 @@
   "main": "server/server.js",
   "scripts": {
     "pretest": "jshint .",
-    "dev": "gulp dev && node ."
+    "dev": "gulp dev && node .",
+    "start": "gulp dev && node .",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -20,6 +22,7 @@
     "loopback-explorer": "^1.1.0"
   },
   "devDependencies": {
+    "bower": "^1.6.5",
     "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-cachebust": "0.0.6",
@@ -34,5 +37,8 @@
     "type": "",
     "url": ""
   },
-  "description": "crossover"
+  "description": "crossover",
+  "engines": {
+    "node": "0.12.x"
+  }
 }
