@@ -14,12 +14,12 @@
     <div class="co-progress-wrapper co-val-{{columnName | slugify}}" ng-switch-when="Build">
       <div class="co-status co-{{columnName | slugify}}-status pull-left">
         <div class="co-circle neutral">
-          <i class="fa {{getIconName(getColumnValue(columnName).status, true)}} co-status-{{getColumnValue(columnName).status | slugify}}"></i>
+          <i class="fa {{getIconName(getColumnValue(columnName).status, true)}} co-status-{{getColumnValue('Status') | slugify}}"></i>
         </div>
       </div>
       <div class="co-progress co-{{columnName | slugify}}-progress">
         <div class="progress">
-          <div class="progress-bar progress-bar-striped {{getColumnValue(columnName).status | slugify}}"
+          <div class="progress-bar progress-bar-striped {{getColumnValue('Status') | slugify}}"
                role="progressbar"
                aria-valuenow="{{getColumnValue(columnName).progress}}"
                aria-valuemin="0"
@@ -33,12 +33,12 @@
     <div class="co-progress-wrapper co-val-{{columnName | slugify}}" ng-switch-when="Unit Test">
       <div class="co-status co-{{columnName | slugify}}-status pull-left">
         <div class="co-circle neutral">
-          <i class="fa {{getIconName(getColumnValue(columnName).status, true)}} co-status-{{getColumnValue(columnName).status | slugify}}"></i>
+          <i class="fa {{getIconName(getColumnValue(columnName).status, true)}} co-status-{{getColumnValue('Status') | slugify}}"></i>
         </div>
       </div>
       <div class="co-progress co-{{columnName | slugify}}-progress">
         <div class="progress">
-          <div class="progress-bar progress-bar-striped {{getColumnValue(columnName).status | slugify}}"
+          <div class="progress-bar progress-bar-striped {{getColumnValue('Status') | slugify}}"
                role="progressbar"
                aria-valuenow="{{getColumnValue(columnName).progress}}"
                aria-valuemin="0"
