@@ -1,5 +1,5 @@
 <tr class="co-row-main">
-  <td ng-repeat="columnName in options.columnNames" class="co-cell-{{columnName | slugify}}" ng-switch="columnName">
+  <td ng-repeat="columnName in options.columnNames" class="co-cell-{{columnName | slugify}} {{getColumnValue('Status') | slugify}}" ng-switch="columnName">
 
     <span class="co-val-{{columnName | slugify}}" ng-switch-when="Time Started">
       <span class="co-val-date">

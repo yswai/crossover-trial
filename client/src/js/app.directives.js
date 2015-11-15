@@ -81,10 +81,12 @@
           var $lastTd = $el.find('td:last');
           if (scope.isSelected) {
             $el.addClass('selected');
+            $el.find('td:first').addClass('selected');
             $lastTd.addClass('expanded');
             $lastTd.attr('rowspan', '2');
           } else {
             $el.removeClass('selected');
+            $el.find('td:first').removeClass('selected');
             $lastTd.removeClass('expanded');
             $lastTd.attr('rowspan', '1');
           }

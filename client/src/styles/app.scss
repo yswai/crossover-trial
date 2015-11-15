@@ -139,6 +139,8 @@ body {
 
 .co-grid {
 
+  table-layout: fixed;
+
    tr {
      &.co-row-hr {
        padding: 0 !important;
@@ -172,10 +174,27 @@ body {
      }
    }
 
-   table-layout: fixed;
-
    td {
      vertical-align: middle !important;
+     &.co-cell-changelist {
+       &:not(.selected) {
+         &.pending {
+           box-shadow: $color-status-pending 0.4rem 0px 0px 0px inset;
+         }
+         &.neutral {
+           box-shadow: $color-status-neutral 0.4rem 0px 0px 0px inset;
+         }
+         &.passed {
+           box-shadow: $color-status-passed 0.4rem 0px 0px 0px inset;
+         }
+         &.failed {
+           box-shadow: $color-status-failed 0.4rem 0px 0px 0px inset;
+         }
+         &.running {
+           box-shadow: $color-status-running 0.4rem 0px 0px 0px inset;
+         }
+       }
+     }
    }
    tbody {
 
