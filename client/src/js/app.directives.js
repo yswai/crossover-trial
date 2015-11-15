@@ -24,7 +24,7 @@
    */
   app.directive('coRowHr', function () {
     return {
-      restrict: 'E',
+      restrict: 'A',
       require: '^coGrid',
       scope: {
         options: '=',
@@ -38,7 +38,13 @@
         });
 
       },
-      template: '<td colspan="{{options.columnNames.length}}"><div ng-show="isSelected" class="co-row-header"></div></td>'
+      controller: ['$scope', 'helper', 'JOBS_COLUMN_MAP',
+        function($scope, helper, JOBS_COLUMN_MAP) {
+          $scope.getColumnValue = function (columnName) {
+            return helper.getColumnValue($scope.rowData, columnName, JOBS_COLUMN_MAP);
+          };
+        }],
+      templateUrl: 'templates/co-row-hr.html'
     }
   });
 

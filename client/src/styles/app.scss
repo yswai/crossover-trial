@@ -141,10 +141,34 @@ body {
 
    tr {
      &.co-row-hr {
-       padding: 0
-     }
-     .co-row-hr {
-       height: 1rem;
+       padding: 0 !important;
+       margin: 0 !important;
+       border-bottom: none !important;
+       td {
+         &.co-row-hr {
+           height: 0.4rem;
+           padding: 0 !important;
+           margin: 0 !important;
+           border-bottom: none !important;
+
+           &.pending {
+             @include bg-color-pending;
+           }
+           &.neutral {
+             @include bg-color-neutral;
+           }
+           &.passed {
+             @include bg-color-passed;
+           }
+           &.failed {
+             @include bg-color-failed();
+           }
+           &.running {
+             @include bg-color-running();
+           }
+
+         }
+       }
      }
    }
 
