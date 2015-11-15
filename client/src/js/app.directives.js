@@ -49,10 +49,15 @@
         GridController.registerHandler(function(id) {
           scope.isSelected = (id === scope.rowData.id);
           scope.$apply();
+          var $lastTd = $el.find('td:last');
           if (scope.isSelected) {
-            $(el).addClass('selected');
+            $el.addClass('selected');
+            $lastTd.addClass('expanded');
+            $lastTd.attr('rowspan', '2');
           } else {
-            $(el).removeClass('selected');
+            $el.removeClass('selected');
+            $lastTd.removeClass('expanded');
+            $lastTd.attr('rowspan', '1');
           }
           scope.$apply();
         });

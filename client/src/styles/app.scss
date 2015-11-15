@@ -15,6 +15,16 @@
   font-size: $font-size-large;
 }
 
+.no-wrap-visible {
+  white-space: nowrap;
+}
+
+.no-wrap-ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 body {
   font-family: 'Oxygen', sans-serif;
 
@@ -172,11 +182,25 @@ body {
            display: none;
          }
        }
+
+       &.co-row-main {
+         td {
+           &.expanded {
+             transition: transform 0.2s linear;
+             transform: scale(1.5,1.5) translateX(20%);
+             border-left-color: rgb(221, 221, 221);
+             border-left-style: solid;
+             border-left-width: 1px;
+           }
+         }
+       }
+
      }
    }
 }
 
 .co-row-detail-wrapper {
+  width: 100%;
   .co-folder-detail {
     position: relative;
     .co-folder-status-icon {
