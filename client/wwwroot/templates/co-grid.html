@@ -1,0 +1,14 @@
+<table class="table table-responsive co-grid">
+
+  <thead>
+    <tr>
+      <th ng-repeat="c in options.columnNames">{{GridController.selectedRow}}{{ c }}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr class="co-row-main" co-row-item-head options="options" row-data="job" ng-repeat-start="job in options.data | orderBy:'-changeset'"></tr>
+    <tr class="co-row-sub" co-row-item-detail options="options" row-data="job" ng-repeat-end></tr>
+  </tbody>
+
+</table>

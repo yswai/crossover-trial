@@ -1,0 +1,72 @@
+<tr class="co-row-main">
+  <td ng-repeat="columnName in options.columnNames" class="co-cell-{{columnName | slugify}}" ng-switch="columnName">
+
+    <span class="co-val-{{columnName | slugify}}" ng-switch-when="Time Started">
+      <span class="co-val-date">
+        {{getColumnValue(columnName) | date:'MM/d/yyyy'}}
+          <i class="fa fa-clock-o"></i>
+      </span>
+      <span class="co-val-time">
+        {{getColumnValue(columnName) | date:'HH:mm:ss a':'+0' | lowercase}}
+      </span>
+    </span>
+
+    <div class="co-progress-wrapper co-val-{{columnName | slugify}}" ng-switch-when="Build">
+      <div class="co-status co-{{columnName | slugify}}-status pull-left">
+        <div class="co-circle neutral">
+          <i class="fa {{getIconName(getColumnValue(columnName).status, true)}} co-status-{{getColumnValue(columnName).status | slugify}}"></i>
+        </div>
+      </div>
+      <div class="co-progress co-{{columnName | slugify}}-progress">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped {{getColumnValue(columnName).status | slugify}}"
+               role="progressbar"
+               aria-valuenow="{{getColumnValue(columnName).progress}}"
+               aria-valuemin="0"
+               aria-valuemax="{{getColumnValue(columnName).progress}}"
+               style="width: {{getColumnValue(columnName).progress}}%">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="co-progress-wrapper co-val-{{columnName | slugify}}" ng-switch-when="Unit Test">
+      <div class="co-status co-{{columnName | slugify}}-status pull-left">
+        <div class="co-circle neutral">
+          <i class="fa {{getIconName(getColumnValue(columnName).status, true)}} co-status-{{getColumnValue(columnName).status | slugify}}"></i>
+        </div>
+      </div>
+      <div class="co-progress co-{{columnName | slugify}}-progress">
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped {{getColumnValue(columnName).status | slugify}}"
+               role="progressbar"
+               aria-valuenow="{{getColumnValue(columnName).progress}}"
+               aria-valuemin="0"
+               aria-valuemax="{{getColumnValue(columnName).progress}}"
+               style="width: {{getColumnValue(columnName).progress}}%">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="co-progress-wrapper co-val-{{columnName | slugify}}" ng-switch-when="Functional Test">
+      <div class="co-status co-{{columnName | slugify}}-status pull-left">
+        <div class="co-circle neutral">
+          <i class="fa {{getIconName(getColumnValue(columnName).status, true)}} co-status-{{getColumnValue(columnName).status | slugify}}"></i>
+        </div>
+      </div>
+    </div>
+
+    <span class="co-val-{{columnName | slugify}}" ng-switch-when="Status">
+      <span class="co-overall-status co-status-{{getColumnValue(columnName) | lowercase}}">
+        <i class="fa {{getIconName(getColumnValue(columnName))}}"></i>&nbsp;{{getColumnValue(columnName)}}
+      </span>
+    </span>
+
+    <span class="co-val-{{columnName | slugify}}" ng-switch-default>
+      {{getColumnValue(columnName)}}
+    </span>
+
+  </td>
+</tr>
+
