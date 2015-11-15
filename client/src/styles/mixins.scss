@@ -1,0 +1,57 @@
+@import "./variables.scss";
+
+@mixin co-circle($radius) {
+  height: $radius;
+  width: $radius;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+@mixin display-flex() {
+  display: flex;
+}
+
+
+
+@mixin bg-color-passed {
+  background-color: $color-status-passed;
+}
+
+@mixin bg-color-running {
+  background-color: $color-status-running;
+}
+
+@mixin bg-color-pending {
+  background-color: $color-status-pending;
+}
+
+@mixin bg-color-failed {
+  background-color: $color-status-failed;
+}
+
+@mixin bg-color-neutral {
+  background-color: $color-status-neutral;
+}
+
+
+
+@mixin color-passed {
+  color: $color-status-passed;
+}
+
+@mixin color-running {
+  color: $color-status-running;
+}
+
+@mixin color-pending {
+  color: $color-status-pending;
+}
+
+@mixin color-failed {
+  color: $color-status-failed;
+}
+
+@mixin color-neutral {
+  color: $color-status-neutral;
+}

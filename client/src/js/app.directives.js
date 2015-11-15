@@ -36,7 +36,7 @@
             'RUNNING': 'fa-refresh'
           };
 
-          return ICON_MAP[status.toUpperCase()];
+          return status ? ICON_MAP[status.toUpperCase()] : '';
 
         };
 

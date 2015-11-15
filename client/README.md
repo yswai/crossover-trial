@@ -1,3 +1,2 @@
-## Client
-
-### Front end code
+## Client folder
+Folder for front end

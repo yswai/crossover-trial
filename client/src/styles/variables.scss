@@ -10,36 +10,5 @@ $color-status-passed: #1AB394;
 $color-status-failed: #ED5565;
 $color-status-neutral: #E4E4E7;
 
-@mixin co-circle($radius) {
-  height: $radius;
-  width: $radius;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-}
-
-@mixin display-flex() {
-  display: flex;
-}
-
-@mixin color-passed {
-  color: $color-status-passed;
-}
-
-@mixin color-running {
-  color: $color-status-running;
-}
-
-@mixin color-pending {
-  color: $color-status-pending;
-}
-
-@mixin color-failed {
-  color: $color-status-failed;
-}
-
-@mixin color-neutral {
-  color: $color-status-neutral;
-}
 
 

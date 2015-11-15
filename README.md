@@ -1,12 +1,14 @@
 # Crossover Trial
+Using:
+* AngularJS, Bootstrap, SCSS, Gulp, Fontawesome
+* Loopback, MongoDB
 
 ## Prerequisites
 * MongoDB
 * Nodejs
 
-## How to run
-Run following command in root directory
+## Getting Started
+Run following commands in project root directory
 * npm install
 * bower install
-* gulp dev
-* node .
+* npm run dev

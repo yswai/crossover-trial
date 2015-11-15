@@ -1,4 +1,6 @@
 @import "./variables.scss";
+@import "./mixins.scss";
+@import "./icons.scss";
 @import "./vaadin.scss";
 
 body {
@@ -31,19 +33,19 @@ body {
 .co-circle {
   @include co-circle(3.5rem);
   &.pending {
-    background-color: $color-status-pending;
+    @include bg-color-pending;
   }
   &.neutral {
-    background-color: $color-status-neutral;
+    @include bg-color-neutral;
   }
   &.passed {
-    background-color: $color-status-passed;
+    @include bg-color-passed;
   }
   &.failed {
-    background-color: $color-status-failed;
+    @include bg-color-failed();
   }
   &.running {
-    background-color: $color-status-running;
+    @include bg-color-running();
   }
 }
 
@@ -68,7 +70,7 @@ body {
   .co-circle {
     i {
       position: absolute;
-      transform: scale(2.5, 2.5);
+      transform: scale(2.3, 2.3);
       top: 1.1rem;
       left: 1.1rem;
       z-index: 10;
