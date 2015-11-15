@@ -20,6 +20,29 @@
   });
 
   /**
+   * Decoration ines directive
+   */
+  app.directive('coRowHr', function () {
+    return {
+      restrict: 'E',
+      require: '^coGrid',
+      scope: {
+        options: '=',
+        rowData: '='
+      },
+      link: function (scope, el, attr, GridController) {
+
+        GridController.registerHandler(function(id) {
+          scope.isSelected = (id === scope.rowData.id);
+          scope.$apply();
+        });
+
+      },
+      template: '<td colspan="{{options.columnNames.length}}"><div ng-show="isSelected" class="co-row-header"></div></td>'
+    }
+  });
+
+  /**
    * Row header directive
    */
   app.directive('coRowItemHead', function () {

@@ -37,7 +37,7 @@
         <!-- Unit Test -->
         <div class="co-row-detail-item col-md-5">
           <div class="row">
-            <div class="col-md-4 no-wrap-visible">
+            <div class="col-md-3 no-wrap-visible">
               <header class="co-status-{{ (getColumnValue('Unit Test') ?  getColumnValue('Unit Test').status : 'failed') | slugify }}">
                 Unit Test &nbsp; <i class="fa {{ getIconName(getColumnValue('Unit Test').status) }}"></i>
               </header>
@@ -51,7 +51,7 @@
 
               </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
               <div class="row" ng-if="(getColumnValue('Unit Test'))">
                 <div class="col-md-6">
                   <highchart id="chart-unit-{{rowData.id}}" config="unitTestChartConfig"></highchart>
@@ -72,7 +72,7 @@
         <!-- Functional Test -->
         <div class="co-row-detail-item col-md-4">
           <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-3 no-wrap-visible">
               <header class="co-status-{{ (getColumnValue('Functional Test') ?  getColumnValue('Functional Test').status : 'failed') | slugify }}">
                 Functional Test &nbsp; <i class="fa {{ getIconName(getColumnValue('Functional Test').status) }}"></i>
               </header>
@@ -86,9 +86,16 @@
 
               </p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-9">
               <div class="row" ng-if="(getColumnValue('Functional Test'))">
-                <highchart id="chart-func-{{rowData.id}}" config="functionalTestChartConfig"></highchart>
+                <div class="col-md-6">
+                  <highchart id="chart-functional-{{rowData.id}}" config="functionalTestChartConfig"></highchart>
+                </div>
+                <div class="legend col-md-6">
+                  <div><i class="fa fa-square co-status-passed"></i> {{functionalTestChartConfig.series[0].y}} </div>
+                  <div><i class="fa fa-square co-status-pending"></i> {{functionalTestChartConfig.series[1].y}} </div>
+                  <div><i class="fa fa-clock-o"></i> <span class="co-val-time">3:08</span> </div>
+                </div>
               </div>
             </div>
           </div>

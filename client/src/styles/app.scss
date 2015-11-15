@@ -139,6 +139,15 @@ body {
 
 .co-grid {
 
+   tr {
+     &.co-row-hr {
+       padding: 0
+     }
+     .co-row-hr {
+       height: 1rem;
+     }
+   }
+
    table-layout: fixed;
 
    td {
@@ -211,5 +220,6 @@ body {
   }
   .co-detail-progress {
     font-size: 3rem;
+    font-weight: $font-weight-bold;
   }
 }

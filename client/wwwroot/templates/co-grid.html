@@ -7,7 +7,8 @@
   </thead>
 
   <tbody>
-    <tr class="co-row-main" co-row-item-head options="options" row-data="job" ng-repeat-start="job in options.data | orderBy:'-changeset'"></tr>
+    <tr class="co-row-hr" co-row-hr direction="HORIZONTAL" options="options" row-data="job" ng-repeat-start="job in options.data | orderBy:'-changeset'"></tr>
+    <tr class="co-row-main" co-row-item-head options="options" row-data="job"></tr>
     <tr class="co-row-sub" co-row-item-detail options="options" row-data="job" ng-repeat-end></tr>
   </tbody>
 
