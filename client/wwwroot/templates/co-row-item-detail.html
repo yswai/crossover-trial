@@ -72,7 +72,7 @@
         <!-- Functional Test -->
         <div class="co-row-detail-item col-md-4">
           <div class="row">
-            <div class="col-md-3 no-wrap-visible">
+            <div class="col-md-4 no-wrap-visible">
               <header class="co-status-{{ (getColumnValue('Functional Test') ?  getColumnValue('Functional Test').status : 'failed') | slugify }}">
                 Functional Test &nbsp; <i class="fa {{ getIconName(getColumnValue('Functional Test').status) }}"></i>
               </header>
@@ -86,7 +86,7 @@
 
               </p>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-8">
               <div class="row" ng-if="(getColumnValue('Functional Test'))">
                 <div class="col-md-6">
                   <highchart id="chart-functional-{{rowData.id}}" config="functionalTestChartConfig"></highchart>

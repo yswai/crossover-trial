@@ -33,7 +33,7 @@
     },
     size: {
       height: 120,
-      width: 150
+      width: 130
     }
   };
 
