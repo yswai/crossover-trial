@@ -14,6 +14,7 @@
         pie: {
           allowPointSelect: true,
           cursor: 'pointer',
+          startAngle: 40,
           dataLabels: {
             enabled: false
           }
