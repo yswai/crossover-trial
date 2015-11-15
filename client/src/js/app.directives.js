@@ -145,6 +145,8 @@
       controller: ['$scope', 'helper', 'JOBS_COLUMN_MAP', 'PIE_CHART_CONFIG',
         function($scope, helper, JOBS_COLUMN_MAP, PIE_CHART_CONFIG) {
 
+          var defaultDate = new Date();
+
           $scope.getColumnValue = function (columnName) {
             return helper.getColumnValue($scope.rowData, columnName, JOBS_COLUMN_MAP);
           };
@@ -153,6 +155,9 @@
           };
 
           var unitTestData = $scope.getColumnValue('Unit Test');
+          $scope.unitTestTimeStarted = unitTestData ? unitTestData.timeStarted : defaultDate;
+          $scope.unitTestTimeFinish = unitTestData ? unitTestData.timeFinish : defaultDate;
+          $scope.unitTestDuration = moment(moment($scope.unitTestTimeFinish).diff(moment($scope.unitTestTimeStarted))).format('HH:mm:ss');
           var unitTestCovered = unitTestData ? unitTestData.covered : 0;
           var unitTestTotal = unitTestData ? unitTestData.total : 0;
           var unitTestCoverage = unitTestTotal > 0 ? ((unitTestCovered / unitTestTotal) * 100) : 0;
@@ -176,6 +181,9 @@
           });
 
           var funcTestData = $scope.getColumnValue('Functional Test');
+          $scope.funcTestTimeStarted = funcTestData ? funcTestData.timeStarted : defaultDate;
+          $scope.funcTestTimeFinish = funcTestData ? funcTestData.timeFinish : defaultDate;
+          $scope.funcTestDuration = moment(moment($scope.funcTestTimeFinish).diff(moment($scope.funcTestTimeStarted))).format('HH:mm:ss');
           var funcTestCovered = funcTestData ? funcTestData.covered : 0;
           var funcTestTotal = funcTestData ? funcTestData.total : 0;
           var funcTestCoverage = funcTestTotal > 0 ? ((funcTestCovered / funcTestTotal) * 100) : 0;

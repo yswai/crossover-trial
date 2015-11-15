@@ -18,7 +18,7 @@
         return columnDef.get(rowData);
       }
       return null;
-    }
+    };
 
   }]);
 

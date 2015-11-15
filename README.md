@@ -1,6 +1,7 @@
 # Crossover Trial
-Using:
-* AngularJS, Bootstrap, SCSS, Gulp, Fontawesome
+
+## Frameworks & Libraries
+* AngularJS, Bootstrap, SCSS, Gulp, Fontawesome etc (refer bower.json)
 * Loopback, MongoDB
 
 ## Prerequisites

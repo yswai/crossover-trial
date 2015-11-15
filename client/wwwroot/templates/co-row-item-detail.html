@@ -59,7 +59,7 @@
                 <div class="legend col-md-6">
                   <div><i class="fa fa-square co-status-passed"></i> {{unitTestCovered}} </div>
                   <div><i class="fa fa-square co-status-pending"></i> {{unitTestMissed}} </div>
-                  <div><i class="fa fa-clock-o"></i> <span class="co-val-time">3:08</span> </div>
+                  <div><i class="fa fa-clock-o"></i> <span class="co-val-time">{{ unitTestDuration }}</span> </div>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@
                 <div class="legend col-md-6">
                   <div><i class="fa fa-square co-status-passed"></i> {{ funcTestCovered }} </div>
                   <div><i class="fa fa-square co-status-pending"></i> {{ funcTestMissed }} </div>
-                  <div><i class="fa fa-clock-o"></i> <span class="co-val-time">3:08</span> </div>
+                  <div><i class="fa fa-clock-o"></i> <span class="co-val-time">{{ funcTestDuration }}</span> </div>
                 </div>
               </div>
             </div>
