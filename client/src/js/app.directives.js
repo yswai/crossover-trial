@@ -151,33 +151,48 @@
           $scope.showModal = function (folderType) {
             //TODO: showmodal
           };
+
+          var unitTestData = $scope.getColumnValue('Unit Test');
+          var unitTestCovered = unitTestData ? unitTestData.covered : 0;
+          var unitTestTotal = unitTestData ? unitTestData.total : 0;
+          var unitTestCoverage = unitTestTotal > 0 ? ((unitTestCovered / unitTestTotal) * 100) : 0;
+          $scope.unitTestCoverage = unitTestCoverage;
+          $scope.unitTestCovered = unitTestCovered;
+          $scope.unitTestMissed = unitTestTotal - unitTestCovered;
           $scope.unitTestChartConfig = _.extend(_.cloneDeep(PIE_CHART_CONFIG), {
             series: [{
               name: "Test Results",
               colorByPoint: true,
               data: [{
-                name: "Passed",
-                y: 342,
+                name: "Covered",
+                y: unitTestCovered,
                 color: '#1AB394'
               }, {
-                name: "Failed",
-                y: 30,
+                name: "Missed",
+                y: $scope.unitTestMissed,
                 color: '#F8AC59'
               }]
             }]
           });
 
+          var funcTestData = $scope.getColumnValue('Functional Test');
+          var funcTestCovered = funcTestData ? funcTestData.covered : 0;
+          var funcTestTotal = funcTestData ? funcTestData.total : 0;
+          var funcTestCoverage = funcTestTotal > 0 ? ((funcTestCovered / funcTestTotal) * 100) : 0;
+          $scope.funcTestCoverage = funcTestCoverage;
+          $scope.funcTestCovered = funcTestCovered;
+          $scope.funcTestMissed = funcTestTotal - funcTestCovered;
           $scope.functionalTestChartConfig = _.extend(_.cloneDeep(PIE_CHART_CONFIG), {
             series: [{
               name: "Test Results",
               colorByPoint: true,
               data: [{
-                name: "Passed",
-                y: 14321,
+                name: "Covered",
+                y: funcTestCovered,
                 color: '#1AB394'
               }, {
-                name: "Failed",
-                y: 2000,
+                name: "Missed",
+                y: $scope.unitTestMissed,
                 color: '#F8AC59'
               }]
             }]

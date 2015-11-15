@@ -17,8 +17,8 @@
     "status" : "FAILED",
     "timeStarted" : 1447410374000,
     "timeFinish" : 1447420884000,
-    "covered" : 4444,
-    "total" : 88,
+    "covered" : 4322,
+    "total" : 4444,
     "id" : "2"
   }
   ]
@@ -72,7 +72,7 @@
     "timeStarted" : 1447410374000,
     "timeFinish" : 1447414484400,
     "covered" : 6767,
-    "total" : 0,
+    "total" : 6767,
     "id" : "2"
   }, {
     "type" : "FUNCTIONAL",
@@ -80,8 +80,8 @@
     "status" : "PASSED",
     "timeStarted" : 1447410374000,
     "timeFinish" : 1447415474000,
-    "covered" : 4444,
-    "total" : 88,
+    "covered" : 3333,
+    "total" : 4444,
     "id" : "3"
   }
   ]
@@ -119,7 +119,7 @@
     "timeStarted" : 1447410374000,
     "timeFinish" : 1447410464000,
     "covered" : 342,
-    "total" : 30,
+    "total" : 372,
     "status" : "PASSED",
     "id" : "2"
   }, {
@@ -127,8 +127,8 @@
     "progress" : 100,
     "timeStarted" : 1447410374000,
     "timeFinish" : 1447520374000,
-    "covered" : 14321,
-    "total" : 2000,
+    "covered" : 12321,
+    "total" : 14321,
     "status" : "PASSED",
     "id" : "3"
   }

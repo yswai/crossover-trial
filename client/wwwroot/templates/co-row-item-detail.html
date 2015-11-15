@@ -11,7 +11,7 @@
                 Build &nbsp; <i class="fa {{ getIconName(getColumnValue('Build').status) }}"></i>
               </header>
               <p>
-                <i class="fa fa-clock-o"></i> <span class="co-val-time">{{ getColumnValue('Time Started') | date:'h:MM a':'+0' | lowercase }}</span>
+                <i class="fa fa-clock-o"></i> <span class="co-val-time">{{ getColumnValue('Build').timeStarted | date:'h:MM a':'+0' | lowercase }}</span>
               </p>
             </div>
             <div class="col-md-6 col-xs-6">
@@ -43,7 +43,7 @@
               </header>
               <p>
                 <span class="co-detail-progress co-status-{{ (getColumnValue('Unit Test') ?  getColumnValue('Unit Test').status : 'failed') | slugify }}">
-                  {{getColumnValue('Unit Test').progress || 0}}%
+                  {{ (unitTestCoverage | number:0) || 0}}%
                 </span>
                 <p ng-if="!(getColumnValue('Unit Test'))">Status:
                   <span class="font-large co-status-{{ (getColumnValue('Unit Test') ?  getColumnValue('Unit Test').status : 'failed') | slugify }}">Can't Run</span>
@@ -57,8 +57,8 @@
                   <highchart id="chart-unit-{{rowData.id}}" config="unitTestChartConfig"></highchart>
                 </div>
                 <div class="legend col-md-6">
-                  <div><i class="fa fa-square co-status-passed"></i> {{unitTestChartConfig.series[0].y}} </div>
-                  <div><i class="fa fa-square co-status-pending"></i> {{unitTestChartConfig.series[1].y}} </div>
+                  <div><i class="fa fa-square co-status-passed"></i> {{unitTestCovered}} </div>
+                  <div><i class="fa fa-square co-status-pending"></i> {{unitTestMissed}} </div>
                   <div><i class="fa fa-clock-o"></i> <span class="co-val-time">3:08</span> </div>
                 </div>
               </div>
@@ -78,7 +78,7 @@
               </header>
               <p>
                 <span class="co-detail-progress co-status-{{ (getColumnValue('Functional Test') ?  getColumnValue('Functional Test').status : 'failed') | slugify }}">
-                  {{getColumnValue('Functional Test').progress || 0}}%
+                  {{(funcTestCoverage | number:0) || 0}}%
                 </span>
               <p ng-if="!(getColumnValue('Functional Test'))">Status:
                 <span class="font-large co-status-{{ (getColumnValue('Functional Test') ?  getColumnValue('Functional Test').status : 'failed') | slugify }}">Can't Run</span>
@@ -92,8 +92,8 @@
                   <highchart id="chart-functional-{{rowData.id}}" config="functionalTestChartConfig"></highchart>
                 </div>
                 <div class="legend col-md-6">
-                  <div><i class="fa fa-square co-status-passed"></i> {{functionalTestChartConfig.series[0].y}} </div>
-                  <div><i class="fa fa-square co-status-pending"></i> {{functionalTestChartConfig.series[1].y}} </div>
+                  <div><i class="fa fa-square co-status-passed"></i> {{ funcTestCovered }} </div>
+                  <div><i class="fa fa-square co-status-pending"></i> {{ funcTestMissed }} </div>
                   <div><i class="fa fa-clock-o"></i> <span class="co-val-time">3:08</span> </div>
                 </div>
               </div>
