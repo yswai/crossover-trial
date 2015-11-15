@@ -60,7 +60,7 @@
 
           var ICON_MAP = {
             'PASSED': isInverted ? 'fa-check-circle' : 'fa-check-circle-o',
-            'FAILED': isInverted ? 'fa-exclamation-circle' : 'fa-times-circle',
+            'FAILED': isInverted ? 'fa-exclamation-circle' : 'fa-times-circle-o',
             'PENDING': 'fa-ellipsis-h',
             'RUNNING': 'fa-refresh'
           };
@@ -161,7 +161,7 @@
                 color: '#1AB394'
               }, {
                 name: "Failed",
-                y: 3,
+                y: 30,
                 color: '#F8AC59'
               }]
             }]
