@@ -3,6 +3,18 @@
 @import "./icons.scss";
 @import "./vaadin.scss";
 
+.font-small {
+  font-size: $font-size-small;
+}
+
+.font-medium {
+  font-size: $font-size-medium;
+}
+
+.font-large {
+  font-size: $font-size-large;
+}
+
 body {
   font-family: 'Oxygen', sans-serif;
 
@@ -72,7 +84,7 @@ body {
       position: absolute;
       transform: scale(2.3, 2.3);
       top: 1.1rem;
-      left: 1.2rem;
+      left: 1.1rem;
       z-index: 10;
     }
     &.passed {
@@ -109,6 +121,10 @@ body {
       }
     }
   }
+}
+
+.co-val-time {
+  font-size: $font-size-small;
 }
 
 .co-grid {
@@ -158,8 +174,18 @@ body {
        }
      }
    }
+}
 
-  .co-row-detail-wrapper {
-    @include display-flex();
+.co-row-detail-wrapper {
+  .co-folder-detail {
+    position: relative;
+    .co-folder-status-icon {
+      position: absolute;
+      left: 0.7rem;
+      top: 0.7rem;
+    }
+  }
+  .co-detail-progress {
+    font-size: 3rem;
   }
 }

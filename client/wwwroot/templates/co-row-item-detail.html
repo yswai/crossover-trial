@@ -1,14 +1,92 @@
 <tr class="co-row-sub" ng-hide="!isSelected">
   <td colspan="{{options.columnNames.length}}">
-    <div class="co-row-detail-wrapper">
-      <div class="co-row-detail-item">
-        Build <i class="fa fa-check-square"></i>
-      </div>
-      <div class="co-row-detail-item">
-        Unit Test <i class="fa fa-check-square"></i>
-      </div>
-      <div class="co-row-detail-item">
-        Functional Test <i class="fa fa-check-square"></i>
+    <div class="co-row-detail-wrapper container">
+      <div class="row">
+
+        <!-- Build -->
+        <div class="co-row-detail-item col-md-3">
+          <div class="row">
+            <div class="col-md-4 col-xs-4">
+              <header class="co-status-{{ (getColumnValue('Build') ?  getColumnValue('Build').status : 'failed') | slugify }}">
+                Build &nbsp; <i class="fa {{ getIconName(getColumnValue('Build').status) }}"></i>
+              </header>
+              <p>
+                <i class="fa fa-clock-o"></i> <span class="co-val-time">{{ getColumnValue('Time Started') | date:'h:MM a':'+0' | lowercase }}</span>
+              </p>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <span class="pull-left co-folder-detail">
+                <i class="fa fa-folder-o fa-3x co-status-{{ getColumnValue('Build').status | slugify }}"></i>
+                <i class="co-folder-status-icon fa fa-2x {{ getIconName(getColumnValue('Build').status, true) }} co-status-{{ getColumnValue('Build').status | slugify }}"></i>
+                <br/>
+                <a href="#" ng-click="showModal('debug')">debug</a>
+              </span>
+              <span class="pull-right co-folder-detail">
+                <i class="fa fa-folder-o fa-3x co-status-{{ getColumnValue('Build').status | slugify }}"></i>
+                <i class="co-folder-status-icon fa fa-2x {{ getIconName(getColumnValue('Build').status, true) }} co-status-{{ getColumnValue('Build').status | slugify }}"></i>
+                <br/>
+                <a href="#" ng-click="showModal('release')">release</a>
+              </span>
+            </div>
+            <div class="col-md-2 col-xs-2">
+              <span class="pull-right col-md-2 co-status-neutral"><i class="fa fa-2x fa-chevron-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Unit Test -->
+        <div class="co-row-detail-item col-md-5">
+          <div class="row">
+            <div class="col-md-4">
+              <header class="co-status-{{ (getColumnValue('Unit Test') ?  getColumnValue('Unit Test').status : 'failed') | slugify }}">
+                Unit Test &nbsp; <i class="fa {{ getIconName(getColumnValue('Unit Test').status) }}"></i>
+              </header>
+              <p>
+                <span class="co-detail-progress co-status-{{ (getColumnValue('Unit Test') ?  getColumnValue('Unit Test').status : 'failed') | slugify }}">
+                  {{getColumnValue('Unit Test').progress || 0}}%
+                </span>
+                <p ng-if="!(getColumnValue('Unit Test'))">Status:
+                  <span class="font-large co-status-{{ (getColumnValue('Unit Test') ?  getColumnValue('Unit Test').status : 'failed') | slugify }}">Can't Run</span>
+                </p>
+
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="row" ng-if="(getColumnValue('Unit Test'))">
+                <highchart id="chart-unit-{{rowData.id}}" config="unitTestChartConfig"></highchart>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <span class="pull-right col-md-2 co-status-neutral"><i class="fa fa-2x fa-chevron-right"></i></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Functional Test -->
+        <div class="co-row-detail-item col-md-4">
+          <div class="row">
+            <div class="col-md-6">
+              <header class="co-status-{{ (getColumnValue('Functional Test') ?  getColumnValue('Functional Test').status : 'failed') | slugify }}">
+                Functional Test &nbsp; <i class="fa {{ getIconName(getColumnValue('Functional Test').status) }}"></i>
+              </header>
+              <p>
+                <span class="co-detail-progress co-status-{{ (getColumnValue('Functional Test') ?  getColumnValue('Functional Test').status : 'failed') | slugify }}">
+                  {{getColumnValue('Functional Test').progress || 0}}%
+                </span>
+              <p ng-if="!(getColumnValue('Functional Test'))">Status:
+                <span class="font-large co-status-{{ (getColumnValue('Functional Test') ?  getColumnValue('Functional Test').status : 'failed') | slugify }}">Can't Run</span>
+              </p>
+
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="row" ng-if="(getColumnValue('Functional Test'))">
+                <highchart id="chart-func-{{rowData.id}}" config="functionalTestChartConfig"></highchart>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </td>

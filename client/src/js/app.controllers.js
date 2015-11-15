@@ -2,7 +2,44 @@
 
   'use strict';
 
+  var PIE_CHART_CONFIG = {
+    options: {
+      chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+      },
+      plotOptions: {
+        pie: {
+          allowPointSelect: true,
+          cursor: 'pointer',
+          dataLabels: {
+            enabled: false
+          }
+        }
+      },
+      tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+      },
+      legend: {
+        align: 'right',
+        verticalAlign: 'top',
+        layout: 'vertical'
+      }
+    },
+    title: {
+      text: ''
+    },
+    size: {
+      height: 120,
+      width: 150
+    }
+  };
+
   var app = angular.module('app');
+
+  app.constant('PIE_CHART_CONFIG', PIE_CHART_CONFIG);
 
   app.constant('JOBS_COLUMN_MAP', {
     ChangeList: {
