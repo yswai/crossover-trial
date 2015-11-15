@@ -16,7 +16,9 @@
               return Job.find({}).$promise;
             }]
           },
-          template: '<div class="panel panel-default"><co-grid options="JobsController.gridOptions"></co-grid></div>'
+          template: ['<div ng-if="!noData" class="panel panel-default"><co-grid options="JobsController.gridOptions"></co-grid></div>',
+            '<div ng-if="noData" class="col-md-offset-6"><i class="fa fa-exclamation-triangle fa-2x co-status-failed"></i>',
+            '<span class="co-no-data">&nbsp;No Data</span></div>'].join('')
         });
 
       $urlRouterProvider.otherwise('/jobs');

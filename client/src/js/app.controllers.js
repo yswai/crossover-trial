@@ -20,7 +20,7 @@
         }
       },
       tooltip: {
-        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        pointFormat: '<b>{point.percentage:.0f}%</b>'
       },
       legend: {
         align: 'right',
@@ -85,6 +85,8 @@
         columnNames: helper.getColumnNames(JOBS_COLUMN_MAP),
         data: jobs
       };
+
+      $scope.noData = _.isEmpty(jobs);
 
     }]);
 
