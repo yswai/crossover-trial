@@ -33,11 +33,11 @@
     "public": false
   },
   "job": {
-    "dataSource": "dev",
+    "dataSource": "mongolab",
     "public": true
   },
   "jobStatus": {
-    "dataSource": "dev",
+    "dataSource": "mongolab",
     "public": false
   }
 }

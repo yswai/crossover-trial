@@ -6,6 +6,17 @@
     "name": "dev",
     "connector": "mongodb"
   },
+  "mongolab": {
+    "host": "ds053894.mongolab.com",
+    "port": 53894,
+    "debug": true,
+    "database": "crossover-test",
+    "name": "mongolab",
+    "connector": "mongodb",
+    "username": "co",
+    "password": "1234",
+    "url": "mongodb://co:1234@ds053894.mongolab.com:53894/crossover-test"
+  },
   "db": {
     "name": "db",
     "connector": "memory"
