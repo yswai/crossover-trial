@@ -12,7 +12,7 @@
     "debug": true,
     "database": "crossover-test",
     "name": "mongolab",
-    "connector": "mongodb",
+    "connector": "loopback-connector-mongodb",
     "username": "co",
     "password": "1234",
     "url": "mongodb://co:1234@ds053894.mongolab.com:53894/crossover-test"
