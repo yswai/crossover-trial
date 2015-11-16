@@ -1,137 +1,142 @@
-[{
-  "changeset" : "432459",
-  "owner" : "Dora",
-  "timeStarted" : {
-    "$date" : 1447410374000
+[
+  {
+    "changeset": "432459",
+    "owner": "Dora",
+    "timeStarted": "2015-11-13T10:26:14.000Z",
+    "testStatuses": [
+      {
+        "type": "BUILD",
+        "progress": 100,
+        "status": "PASSED",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T10:34:44.000Z",
+        "id": "1"
+      },
+      {
+        "type": "UNIT",
+        "progress": 100,
+        "status": "FAILED",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T13:21:24.000Z",
+        "covered": 4322,
+        "total": 4444,
+        "id": "2"
+      }
+    ]
   },
-  "testStatuses" : [{
-    "type" : "BUILD",
-    "progress" : 100,
-    "status" : "PASSED",
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447410884000,
-    "id" : "1"
-  }, {
-    "type" : "UNIT",
-    "progress" : 100,
-    "status" : "FAILED",
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447420884000,
-    "covered" : 4322,
-    "total" : 4444,
-    "id" : "2"
-  }
-  ]
-}, {
-  "changeset" : "432464",
-  "owner" : "JTuck",
-  "timeStarted" : {
-    "$date" : 1447410374000
+  {
+    "changeset": "432464",
+    "owner": "JTuck",
+    "timeStarted": "2015-11-13T10:26:14.000Z",
+    "testStatuses": [
+      {
+        "type": "BUILD",
+        "progress": 0,
+        "status": "PENDING",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T10:51:24.000Z",
+        "id": "1"
+      }
+    ]
   },
-  "testStatuses" : [{
-    "type" : "BUILD",
-    "progress" : 0,
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447411884000,
-    "status" : "PENDING",
-    "id" : "1"
-  }
-  ]
-}, {
-  "changeset" : "432463",
-  "owner" : "Dora",
-  "timeStarted" : {
-    "$date" : 1447410374000
+  {
+    "changeset": "432463",
+    "owner": "Dora",
+    "timeStarted": "2015-11-13T10:26:14.000Z",
+    "testStatuses": [
+      {
+        "type": "BUILD",
+        "progress": 80,
+        "status": "RUNNING",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T11:24:44.000Z",
+        "id": "1"
+      }
+    ]
   },
-  "testStatuses" : [{
-    "type" : "BUILD",
-    "progress" : 80,
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447413884000,
-    "status" : "RUNNING",
-    "id" : "1"
-  }
-  ]
-}, {
-  "changeset" : "432462",
-  "owner" : "Samy",
-  "timeStarted" : {
-    "$date" : 1447410374000
+  {
+    "changeset": "432462",
+    "owner": "Samy",
+    "timeStarted": "2015-11-13T10:26:14.000Z",
+    "testStatuses": [
+      {
+        "type": "BUILD",
+        "progress": 100,
+        "status": "PASSED",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T23:44:44.000Z",
+        "id": "1"
+      },
+      {
+        "type": "UNIT",
+        "progress": 100,
+        "status": "PASSED",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T11:34:44.400Z",
+        "covered": 6767,
+        "total": 6767,
+        "id": "2"
+      },
+      {
+        "type": "FUNCTIONAL",
+        "progress": 100,
+        "status": "PASSED",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T11:51:14.000Z",
+        "covered": 3333,
+        "total": 4444,
+        "id": "3"
+      }
+    ]
   },
-  "testStatuses" : [{
-    "type" : "BUILD",
-    "progress" : 100,
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447458284000,
-    "status" : "PASSED",
-    "id" : "1"
-  }, {
-    "type" : "UNIT",
-    "progress" : 100,
-    "status" : "PASSED",
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447414484400,
-    "covered" : 6767,
-    "total" : 6767,
-    "id" : "2"
-  }, {
-    "type" : "FUNCTIONAL",
-    "progress" : 100,
-    "status" : "PASSED",
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447415474000,
-    "covered" : 3333,
-    "total" : 4444,
-    "id" : "3"
-  }
-  ]
-}, {
-  "changeset" : "432461",
-  "owner" : "JTuck",
-  "timeStarted" : {
-    "$date" : 1447410374000
+  {
+    "changeset": "432461",
+    "owner": "JTuck",
+    "timeStarted": "2015-11-13T10:26:14.000Z",
+    "testStatuses": [
+      {
+        "type": "BUILD",
+        "progress": 0,
+        "status": "FAILED",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T11:49:34.000Z",
+        "id": "1"
+      }
+    ]
   },
-  "testStatuses" : [{
-    "type" : "BUILD",
-    "progress" : 0,
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447415374000,
-    "status" : "FAILED",
-    "id" : "1"
+  {
+    "changeset": "432460",
+    "owner": "Samy",
+    "timeStarted": "2015-11-13T10:26:14.000Z",
+    "testStatuses": [
+      {
+        "type": "BUILD",
+        "progress": 100,
+        "status": "PASSED",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T10:34:44.000Z",
+        "id": "1"
+      },
+      {
+        "type": "UNIT",
+        "progress": 100,
+        "status": "PASSED",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-13T10:27:44.000Z",
+        "covered": 342,
+        "total": 372,
+        "id": "2"
+      },
+      {
+        "type": "FUNCTIONAL",
+        "progress": 100,
+        "status": "PASSED",
+        "timeStarted": "2015-11-13T10:26:14.000Z",
+        "timeFinish": "2015-11-14T16:59:34.000Z",
+        "covered": 12321,
+        "total": 14321,
+        "id": "3"
+      }
+    ]
   }
-  ]
-}, {
-  "changeset" : "432460",
-  "owner" : "Samy",
-  "timeStarted" : {
-    "$date" : 1447410374000
-  },
-  "testStatuses" : [{
-    "type" : "BUILD",
-    "progress" : 100,
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447410884000,
-    "status" : "PASSED",
-    "id" : "1"
-  }, {
-    "type" : "UNIT",
-    "progress" : 100,
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447410464000,
-    "covered" : 342,
-    "total" : 372,
-    "status" : "PASSED",
-    "id" : "2"
-  }, {
-    "type" : "FUNCTIONAL",
-    "progress" : 100,
-    "timeStarted" : 1447410374000,
-    "timeFinish" : 1447520374000,
-    "covered" : 12321,
-    "total" : 14321,
-    "status" : "PASSED",
-    "id" : "3"
-  }
-  ]
-}
 ]
