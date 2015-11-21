@@ -15,7 +15,6 @@
     "connector": "loopback-connector-mongodb",
     "username": "co",
     "password": "1234",
-    // "url": "mongodb://co:1234@ds053894.mongolab.com:53894/crossover-test"
     "url": "mongodb://co:1234@ds057224.mongolab.com:57224/heroku_tcj9x49w"
   },
   "db": {
