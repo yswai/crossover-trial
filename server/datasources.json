@@ -1,11 +1,4 @@
 {
-  "dev": {
-    "host": "127.0.0.1",
-    "port": 27017,
-    "database": "crossover",
-    "name": "dev",
-    "connector": "mongodb"
-  },
   "mongolab": {
     "debug": true,
     "name": "mongolab",
